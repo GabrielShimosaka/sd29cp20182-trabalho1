@@ -9,14 +9,20 @@ o envio e o recebimento de e-mails entre as diversas instâncias destes servidor
 ### Envio de emails:
 Os passos para o envio de um email está apresentado na Figura abaixo e consiste em: (1) a aplicação do usuário deve buscar no servidor DNS (TCP) a localização (IP:Porta) do servidor SMTP do usuário, (2) enviar a mensagem para o servidor STMP do usuário; (3) o servidor SMTP do usuário dever buscar no DNS a localização (IP:Porta) do servidor SMTP de destino; (4) o servidor SMTP do usuário deve enviar a mensagem para o servidor SMTP de destino; (5) servidor SMTP de destino, coloca a mensagem na caixa postal do usuário de destino.
 **Observação:** Caso o domı́nio de destino da mensagem seja o mesmo de origem, os passos 3 e 4 não são necessários.
+![smtp](https://github.com/favarim/sd29cp20182-trabalho1/blob/master/SD29CP-Trabalho1-20182/figuras/smtp.jpg)
+
 
 
 ### Recebimento de emails:
 Os passos para o recebimento de um email está apresentado na Figura abaixo e consistem em: (1) a aplicação do usuário busca no servidor DNS a localização (IP:Porta) do servidor POP do usuário, (2) solicita ao servidor POP a leitura das mensagens (emails) de sua caixa postal; (3) servidor POP busca na caixa postal do do usuário por novas mensagens, caso existam envia todas para o usuário. O usuário tem a opção de escolher de manter as mensagens no servidor após serem lidas.
+![smtp](https://github.com/favarim/sd29cp20182-trabalho1/blob/master/SD29CP-Trabalho1-20182/figuras/pop.jpg)
+
 
 ## Especificação do Trabalho
 A aplicação distribuı́da a ser desenvolvida deve ser composta por três módulos: Cliente, Servidor
-IMAP/POP e Servidor de DNS, conforme mostra a Figura 2.
+IMAP/POP e Servidor de DNS, conforme mostra a figura abaixo.
+![mensagens-protocolo](https://github.com/favarim/sd29cp20182-trabalho1/blob/master/SD29CP-Trabalho1-20182/figuras/java.jpg)
+
 
 ### Cliente
 Deve prover uma interface (texto ou gráfica) que permita escolher entre o envio e o recebimento de emails:
